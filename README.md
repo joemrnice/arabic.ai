@@ -38,7 +38,7 @@ contributions only require editing data, not markup.
 ## Getting started
 
 ```bash
-git clone https://github.com/<your-username>/arabic.ai.git
+git clone https://github.com/joemrnice/arabic.ai.git
 cd arabic.ai
 npx serve .   # or any static file server
 ```
