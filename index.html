@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>arabic.ai — a practical Arabic grammar, phonetics & transliteration guide</title>
+<meta name="description" content="An open-source, practical Arabic-to-English learning reference: alphabet, pronunciation, grammar, verbs, sentence structure, vocabulary, Q&A, and code projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="flex items-center gap-3">
+    <button class="menu-toggle btn btn-ghost" aria-label="Toggle navigation">☰</button>
+    <a href="index.html" class="brand">
+      <span class="brand-ar">ع</span>
+      <span>arabic<span class="brand-dot">.ai</span></span>
+    </a>
+  </div>
+  <div class="topbar-actions">
+    <button id="translit-toggle" class="btn btn-ghost"></button>
+    <a class="btn btn-gold" href="https://github.com/" target="_blank" rel="noopener">★ Star on GitHub</a>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="sidebar">
+    <div class="sidebar-group">
+      <div class="sidebar-label">Start</div>
+      <a href="index.html">Overview</a>
+    </div>
+    <div class="sidebar-group">
+      <div class="sidebar-label">Learn</div>
+      <a href="alphabet.html">Alphabet &amp; Script</a>
+      <a href="phonetics.html">Pronunciation &amp; Phonetics</a>
+      <a href="grammar.html">Grammar Deep-Dive</a>
+      <a href="verbs.html">Verbs &amp; Conjugation</a>
+      <a href="sentences.html">Sentence Structure</a>
+      <a href="vocabulary.html">Practical Vocabulary</a>
+    </div>
+    <div class="sidebar-group">
+      <div class="sidebar-label">Practice</div>
+      <a href="practice.html">Q&amp;A + Quiz</a>
+      <a href="projects.html">Build: Projects</a>
+    </div>
+    <div class="sidebar-group">
+      <div class="sidebar-label">Reference</div>
+      <a href="resources.html">Sources &amp; Contributing</a>
+    </div>
+  </nav>
+
+  <div class="content-wrap">
+    <div class="col">
+    <main class="page" id="main">
+
+      <section class="hero">
+        <div class="eyebrow">Open-source Arabic reference</div>
+        <h1 class="hero-title">Learn Arabic the way its own <span class="accent">grammar</span> is built:<br>from a root, outward.</h1>
+        <p class="hero-lead">
+          A practical, deep-dive guide to Arabic script, pronunciation, grammar, and verbs —
+          in plain English, with transliteration on every line and working code alongside
+          the theory. No filler, mostly questions and answers, every tiny dot explained.
+        </p>
+        <div class="flex gap-3" style="flex-wrap:wrap;">
+          <a href="alphabet.html" class="btn btn-gold">Start with the alphabet →</a>
+          <a href="practice.html" class="btn btn-ghost">Jump to the Q&amp;A</a>
+        </div>
+      </section>
+
+      <section aria-label="A trilateral root, illustrated">
+        <div class="note gold">
+          <div class="note-title">The idea this whole site is built around</div>
+          Almost every Arabic word grows from a three-letter <strong>root</strong> that
+          carries a core meaning. Change the vowel pattern or add a prefix/suffix, and the
+          root becomes a verb, a person, a place, or a tool. Learn the root system early
+          and vocabulary stops being a list to memorize — it becomes a set of patterns you
+          can predict.
+        </div>
+        <div class="root-card" data-root-card="0"></div>
+      </section>
+
+      <h2 id="what-is-covered">What this guide actually covers</h2>
+      <p class="muted" style="margin-top:-8px;">Six learning sections, a practical Q&amp;A bank, and hands-on coding projects — every page stands alone, so you can start wherever your gap is.</p>
+
+      <div class="card-grid">
+        <a class="card" href="alphabet.html">
+          <span class="card-icon">أ ب ت</span>
+          <span class="card-title">Alphabet &amp; Script</span>
+          <span class="card-desc">All 28 letters, their four positional forms, the dots that distinguish look-alikes, and why some letters refuse to connect.</span>
+        </a>
+        <a class="card" href="phonetics.html">
+          <span class="card-icon">ح ع خ</span>
+          <span class="card-title">Pronunciation &amp; Phonetics</span>
+          <span class="card-desc">Where each sound is physically produced, emphatic vs. plain consonants, short/long vowels, sukūn, shadda, and tanwīn.</span>
+        </a>
+        <a class="card" href="grammar.html">
+          <span class="card-icon">اسم</span>
+          <span class="card-title">Grammar Deep-Dive</span>
+          <span class="card-desc">Gender, number, the case system (iʿrāb), definiteness, iḍāfa possession, adjective agreement, and pronouns.</span>
+        </a>
+        <a class="card" href="verbs.html">
+          <span class="card-icon">فعل</span>
+          <span class="card-title">Verbs &amp; Conjugation</span>
+          <span class="card-desc">Root-and-pattern morphology, the ten verb forms, and a full past/present conjugation table you can drill.</span>
+        </a>
+        <a class="card" href="sentences.html">
+          <span class="card-icon">جملة</span>
+          <span class="card-title">Sentence Structure</span>
+          <span class="card-desc">Nominal vs. verbal sentences, word order, questions, and negation — with side-by-side English comparisons.</span>
+        </a>
+        <a class="card" href="vocabulary.html">
+          <span class="card-icon">كلمات</span>
+          <span class="card-title">Practical Vocabulary</span>
+          <span class="card-desc">Greetings, numbers (and their odd gender-agreement rule), family terms, and everyday phrases.</span>
+        </a>
+        <a class="card" href="practice.html">
+          <span class="card-icon">؟</span>
+          <span class="card-title">Q&amp;A + Quiz</span>
+          <span class="card-desc">The specific, easy-to-miss questions learners actually ask, plus an interactive multiple-choice quiz.</span>
+        </a>
+        <a class="card" href="projects.html">
+          <span class="card-icon">&lt;/&gt;</span>
+          <span class="card-title">Build: Projects</span>
+          <span class="card-desc">Three small, readable JavaScript projects — a transliterator, a root expander, a conjugation drill — to fork and extend.</span>
+        </a>
+      </div>
+
+      <h2 id="every-dot">"Cover every tiny dot" — literally</h2>
+      <p>
+        Arabic's dotting system (<span class="ar">إعجام</span> <span class="translit">iʿjām</span>) is not decorative:
+        letters like <span class="ar">ب ت ث</span> share one skeleton and are told apart only by where their dots sit
+        and how many there are. Get a dot wrong and you've written a different letter, or a different word entirely.
+        This guide treats that literally — the <a href="alphabet.html#dots">alphabet page</a> has a dedicated section
+        on dot placement, and the <a href="practice.html">Q&amp;A</a> answers the specific "wait, why does this letter
+        have three dots" questions learners actually run into.
+      </p>
+
+      <div class="card-grid" style="grid-template-columns:repeat(auto-fill,minmax(150px,1fr));">
+        <div class="card" style="align-items:center; text-align:center;">
+          <div class="card-title" style="font-family:var(--font-display); font-size:1.6rem; color:var(--gold);">28</div>
+          <div class="card-desc">letters in the abjad</div>
+        </div>
+        <div class="card" style="align-items:center; text-align:center;">
+          <div class="card-title" style="font-family:var(--font-display); font-size:1.6rem; color:var(--gold);">RTL</div>
+          <div class="card-desc">written right to left</div>
+        </div>
+        <div class="card" style="align-items:center; text-align:center;">
+          <div class="card-title" style="font-family:var(--font-display); font-size:1.6rem; color:var(--gold);">10</div>
+          <div class="card-desc">verb forms (patterns)</div>
+        </div>
+        <div class="card" style="align-items:center; text-align:center;">
+          <div class="card-title" style="font-family:var(--font-display); font-size:1.6rem; color:var(--gold);">3</div>
+          <div class="card-desc">grammatical cases</div>
+        </div>
+      </div>
+
+    </main>
+    <footer class="site-footer" style="margin:0 32px;">
+      arabic.ai — an open-source, practical Arabic learning reference. Fork it, correct it, extend it. See <a href="resources.html" style="color:var(--gold-soft);">Sources &amp; Contributing</a>.
+    </footer>
+    </div>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

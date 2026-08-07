@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arabic Alphabet & Script — arabic.ai</title>
+<meta name="description" content="All 28 Arabic letters, their four positional forms, dot placement, connecting vs non-connecting letters, and moon/sun letters.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="flex items-center gap-3">
+    <button class="menu-toggle btn btn-ghost" aria-label="Toggle navigation">☰</button>
+    <a href="index.html" class="brand">
+      <span class="brand-ar">ع</span>
+      <span>arabic<span class="brand-dot">.ai</span></span>
+    </a>
+  </div>
+  <div class="topbar-actions">
+    <button id="translit-toggle" class="btn btn-ghost"></button>
+    <a class="btn btn-gold" href="https://github.com/" target="_blank" rel="noopener">★ Star on GitHub</a>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="sidebar">
+    <div class="sidebar-group">
+      <div class="sidebar-label">Start</div>
+      <a href="index.html">Overview</a>
+    </div>
+    <div class="sidebar-group">
+      <div class="sidebar-label">Learn</div>
+      <a href="alphabet.html">Alphabet &amp; Script</a>
+      <a href="phonetics.html">Pronunciation &amp; Phonetics</a>
+      <a href="grammar.html">Grammar Deep-Dive</a>
+      <a href="verbs.html">Verbs &amp; Conjugation</a>
+      <a href="sentences.html">Sentence Structure</a>
+      <a href="vocabulary.html">Practical Vocabulary</a>
+    </div>
+    <div class="sidebar-group">
+      <div class="sidebar-label">Practice</div>
+      <a href="practice.html">Q&amp;A + Quiz</a>
+      <a href="projects.html">Build: Projects</a>
+    </div>
+    <div class="sidebar-group">
+      <div class="sidebar-label">Reference</div>
+      <a href="resources.html">Sources &amp; Contributing</a>
+    </div>
+  </nav>
+
+  <div class="content-wrap with-toc">
+    <div class="col">
+    <main class="page" id="main">
+
+      <div class="eyebrow">Learn · 01</div>
+      <h1 class="page-title">The Alphabet &amp; Script</h1>
+      <p class="page-dek">28 letters, no capitals, written right to left, and every letter reshapes itself depending on where it sits in a word. Here is exactly how, and exactly why.</p>
+
+      <h2 id="how-to-read">How to read this page</h2>
+      <p>
+        Every Arabic word below is shown with a <span class="translit">transliteration</span> in monospace
+        directly under or beside it — a Latin-letter approximation of the sound, using a small set of marks
+        (macrons for long vowels, an underdot for emphatic consonants) so one Latin letter reliably maps to
+        one Arabic sound. Toggle transliteration off with the button in the top bar once you can read the
+        script on its own — that's the actual goal.
+      </p>
+
+      <h2 id="letter-forms">Why letters change shape</h2>
+      <p>
+        Arabic script is cursive by default — even printed text — so most letters physically connect to their
+        neighbors, the way joined-up handwriting connects English letters. A connecting letter therefore has
+        up to <strong>four forms</strong>: isolated (standing alone), initial (starting a word, connects only
+        forward), medial (middle of a word, connects both directions), and final (ending a word, connects only
+        backward). The letter's core identity — its dots and basic skeleton — never changes; only the
+        connecting "arms" appear or disappear.
+      </p>
+      <div class="note">
+        <div class="note-title">Six letters that refuse to connect forward</div>
+        <span class="ar-lg">ا د ذ ر ز و</span> (alif, dāl, dhāl, rāʾ, zāy, wāw) never connect to the letter that
+        follows them, even in the middle of a word. If one of these appears mid-word, the next letter simply
+        starts fresh in its own isolated-style form. This is why you'll sometimes see a visual "break" inside
+        an otherwise joined Arabic word — it's not a space, it's one of these six letters doing its job.
+      </div>
+
+      <h2 id="dots" data-anchor="dots">The dots (iʿjām) — the detail nothing else covers</h2>
+      <p>
+        Several letters share an identical base shape and are distinguished <em>only</em> by small dots
+        (<span class="ar">نقط</span> <span class="translit">nuqaṭ</span>) placed above or below. This is the
+        single most literal answer to "cover every tiny dot" — get the dot count or position wrong and you've
+        written a different letter:
+      </p>
+      <ul>
+        <li><span class="ar-lg">ب ت ث</span> — same base curve. <span class="tok">ب</span> = one dot below, <span class="tok">ت</span> = two dots above, <span class="tok">ث</span> = three dots above.</li>
+        <li><span class="ar-lg">ج ح خ</span> — same base hook. <span class="tok">ح</span> = no dot, <span class="tok">ج</span> = one dot below, <span class="tok">خ</span> = one dot above.</li>
+        <li><span class="ar-lg">د ذ</span> — same base shape. <span class="tok">د</span> = no dot, <span class="tok">ذ</span> = one dot above.</li>
+        <li><span class="ar-lg">ر ز</span> — same base shape. <span class="tok">ر</span> = no dot, <span class="tok">ز</span> = one dot above.</li>
+        <li><span class="ar-lg">س ش</span> — same base shape (with three "teeth"). <span class="tok">س</span> = no dot, <span class="tok">ش</span> = three dots above.</li>
+        <li><span class="ar-lg">ص ض</span> — same base shape. <span class="tok">ص</span> = no dot, <span class="tok">ض</span> = one dot above.</li>
+        <li><span class="ar-lg">ط ظ</span> — same base shape. <span class="tok">ط</span> = no dot, <span class="tok">ظ</span> = one dot above.</li>
+        <li><span class="ar-lg">ع غ</span> — same base shape. <span class="tok">ع</span> = no dot, <span class="tok">غ</span> = one dot above.</li>
+        <li><span class="ar-lg">ف ق</span> — historically distinguished by dot count (one vs. two above); in most modern printing ف keeps one dot and ق keeps two, though some regional (especially Maghrebi) handwriting reverses or alters this.</li>
+      </ul>
+      <div class="note brick">
+        <div class="note-title">Two more marks that aren't "dots" but act like them</div>
+        <strong>Hamza (ء)</strong> is a small hook, not a dot, representing a glottal stop; it can sit on its
+        own or perch on a carrier letter — ا, و, or ي — chosen by vowel-harmony rules explained on the
+        <a href="phonetics.html#hamza">phonetics page</a>. <strong>Tāʾ marbūṭa (ة)</strong> looks like ه with
+        two dots added, and only ever appears at the end of a word, almost always marking feminine gender.
+      </div>
+
+      <h2 id="table">The full letter table</h2>
+      <p class="muted" style="margin-top:-8px;">Tap any card below the table to flip it for a quick self-test.</p>
+      <div class="table-wrap">
+        <table id="alphabet-table">
+          <caption>All 28 letters in dictionary order. IPA column uses the International Phonetic Alphabet.</caption>
+          <thead>
+            <tr><th>Letter</th><th>Isolated</th><th>Initial</th><th>Medial</th><th>Final</th><th>Name</th><th>Translit.</th><th>IPA</th><th>Connects?</th></tr>
+          </thead>
+          <tbody id="alphabet-tbody"></tbody>
+        </table>
+      </div>
+
+      <h2 id="flashcards">Quick self-test flashcards</h2>
+      <div class="card-grid" id="flashcard-grid" style="grid-template-columns:repeat(auto-fill, minmax(160px,1fr));"></div>
+
+      <h2 id="sun-moon">Sun letters and moon letters</h2>
+      <p>
+        This matters the moment you use the definite article <span class="ar">ال</span>
+        (<span class="translit">al-</span>, "the"). Arabic's 28 letters split into two behavioral groups:
+      </p>
+      <ul>
+        <li><strong>Moon letters (14):</strong> <span class="ar-lg">ا ب ج ح خ ع غ ف ق ك م ه و ي</span> — the ل of <span class="translit">al-</span> is pronounced normally: <span class="ar">القمر</span> <span class="translit">al-qamar</span> ("the moon").</li>
+        <li><strong>Sun letters (14):</strong> <span class="ar-lg">ت ث د ذ ر ز س ش ص ض ط ظ ل ن</span> — the ل is not pronounced; instead the following consonant doubles: <span class="ar">الشمس</span> is pronounced <span class="translit">ash-shams</span>, not <span class="translit">al-shams</span>, even though it's still spelled with the ل.</li>
+      </ul>
+      <div class="note gold">
+        <div class="note-title">Memory hook</div>
+        <span class="ar">قمر</span> (<span class="translit">qamar</span>, "moon") itself starts with a moon
+        letter, and <span class="ar">شمس</span> (<span class="translit">shams</span>, "sun") itself starts
+        with a sun letter — the category names are self-demonstrating.
+      </div>
+
+      <h2 id="numerals">Arabic-Indic numerals</h2>
+      <p>Digits are written left to right even though text reads right to left — the one place direction flips inside an Arabic sentence.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Western</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th></tr></thead>
+          <tbody>
+            <tr><td>Eastern Arabic-Indic</td><td class="ar-cell">٠</td><td class="ar-cell">١</td><td class="ar-cell">٢</td><td class="ar-cell">٣</td><td class="ar-cell">٤</td><td class="ar-cell">٥</td><td class="ar-cell">٦</td><td class="ar-cell">٧</td><td class="ar-cell">٨</td><td class="ar-cell">٩</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="muted">Most of the Arab world east of Egypt uses these forms daily; the Maghreb (Morocco, Algeria, Tunisia, Libya) generally uses the same digits as English (0–9).</p>
+
+    </main>
+    <footer class="site-footer" style="margin:0 32px;">
+      arabic.ai — an open-source, practical Arabic learning reference. See <a href="resources.html" style="color:var(--gold-soft);">Sources &amp; Contributing</a>.
+    </footer>
+    </div>
+  </div>
+
+  <aside class="toc">
+    <div class="toc-inner">
+      <div class="toc-label">On this page</div>
+      <div class="toc-list"></div>
+    </div>
+  </aside>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+  // Build the full alphabet table + flashcards from ALPHABET (data.js).
+  // Runs immediately (this script sits at the end of <body>, after the
+  // target elements) so that main.js's own DOMContentLoaded handlers —
+  // which wire up flashcard flipping and the table-of-contents — see the
+  // finished DOM rather than empty containers.
+  (function(){
+    const tbody = document.getElementById("alphabet-tbody");
+    const flashGrid = document.getElementById("flashcard-grid");
+    ALPHABET.forEach(l => {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td class="ar-cell" style="font-size:1.6rem;">${l.forms[0]}</td>
+        <td class="ar-cell">${l.forms[0]}</td>
+        <td class="ar-cell">${l.forms[1]}</td>
+        <td class="ar-cell">${l.forms[2]}</td>
+        <td class="ar-cell">${l.forms[3]}</td>
+        <td>${l.name}</td>
+        <td class="translit-cell">${l.translit}</td>
+        <td class="translit-cell">${l.ipa}</td>
+        <td>${l.connects ? "Yes" : "No"}</td>`;
+      tbody.appendChild(tr);
+
+      const card = document.createElement("div");
+      card.className = "flash";
+      card.innerHTML = `
+        <div class="flash-inner">
+          <div class="flash-face front"><span class="big">${l.forms[0]}</span><span class="gloss">${l.name}</span></div>
+          <div class="flash-face back">
+            <span class="translit" style="font-size:1.1rem;">${l.translit}</span>
+            <span class="gloss">${l.example} — ${l.exGloss}</span>
+          </div>
+        </div>`;
+      flashGrid.appendChild(card);
+    });
+  })();
+</script>
+</body>
+</html>

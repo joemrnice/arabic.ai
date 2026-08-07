@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sentence Structure — arabic.ai</title>
+<meta name="description" content="Arabic sentence structure: nominal vs verbal sentences, VSO vs SVO word order, forming questions, and negation across sentence types.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="flex items-center gap-3">
+    <button class="menu-toggle btn btn-ghost" aria-label="Toggle navigation">☰</button>
+    <a href="index.html" class="brand"><span class="brand-ar">ع</span><span>arabic<span class="brand-dot">.ai</span></span></a>
+  </div>
+  <div class="topbar-actions">
+    <button id="translit-toggle" class="btn btn-ghost"></button>
+    <a class="btn btn-gold" href="https://github.com/" target="_blank" rel="noopener">★ Star on GitHub</a>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="sidebar">
+    <div class="sidebar-group"><div class="sidebar-label">Start</div><a href="index.html">Overview</a></div>
+    <div class="sidebar-group">
+      <div class="sidebar-label">Learn</div>
+      <a href="alphabet.html">Alphabet &amp; Script</a>
+      <a href="phonetics.html">Pronunciation &amp; Phonetics</a>
+      <a href="grammar.html">Grammar Deep-Dive</a>
+      <a href="verbs.html">Verbs &amp; Conjugation</a>
+      <a href="sentences.html">Sentence Structure</a>
+      <a href="vocabulary.html">Practical Vocabulary</a>
+    </div>
+    <div class="sidebar-group"><div class="sidebar-label">Practice</div><a href="practice.html">Q&amp;A + Quiz</a><a href="projects.html">Build: Projects</a></div>
+    <div class="sidebar-group"><div class="sidebar-label">Reference</div><a href="resources.html">Sources &amp; Contributing</a></div>
+  </nav>
+
+  <div class="content-wrap with-toc">
+    <div class="col">
+    <main class="page" id="main">
+
+      <div class="eyebrow">Learn · 05</div>
+      <h1 class="page-title">Sentence Structure</h1>
+      <p class="page-dek">Arabic runs two parallel sentence types side by side, tolerates a flexible word order English can't, and negates each type differently.</p>
+
+      <h2 id="nominal">Nominal sentences (jumla ismiyya) — no verb required</h2>
+      <p>
+        Arabic doesn't need a verb "to be" in the present tense at all. A topic followed directly by a
+        description is already a complete, grammatical sentence:
+      </p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Arabic</th><th>Word-for-word</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td class="ar-cell">البَيْتُ كَبِيرٌ<br><span class="translit">al-baytu kabīrun</span></td><td>the-house big</td><td>"The house is big."</td></tr>
+            <tr><td class="ar-cell">هِيَ طَبِيبَةٌ<br><span class="translit">hiya ṭabībatun</span></td><td>she doctor</td><td>"She is a doctor."</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The two parts have names: <strong>mubtadaʾ</strong> (topic — what we're talking about) and
+        <strong>khabar</strong> (predicate — what's said about it). The khabar can be an adjective (as above),
+        another noun, or even a whole prepositional phrase: <span class="ar">الكِتَابُ عَلَى الطَاوِلَةِ</span>
+        <span class="translit">al-kitābu ʿalā ṭ-ṭāwilati</span> ("the book is on the table").
+      </p>
+
+      <h2 id="verbal">Verbal sentences (jumla fiʿliyya) — verb comes first</h2>
+      <p>
+        When a sentence does contain a verb, the traditional and most formal order is
+        <strong>Verb–Subject–Object (VSO)</strong> — the reverse of English's Subject-Verb-Object:
+      </p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Arabic (VSO)</th><th>Word-for-word</th><th>English (SVO)</th></tr></thead>
+          <tbody>
+            <tr><td class="ar-cell">كَتَبَ الوَلَدُ الرِسَالَةَ<br><span class="translit">kataba l-waladu r-risālata</span></td><td>wrote the-boy the-letter</td><td>"The boy wrote the letter."</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note gold">
+        <div class="note-title">Why VSO doesn't cause confusion</div>
+        Because nouns carry <a href="grammar.html#cases">case endings</a>, the sentence stays unambiguous even
+        with the subject and object swapped in position — <span class="translit">al-waladu</span> is
+        nominative (the doer) regardless of where it sits. In practice, spoken Arabic and journalistic writing
+        very often use SVO too; both orders are grammatical, and the choice shifts emphasis rather than meaning.
+      </div>
+
+      <h2 id="questions">Forming questions</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Type</th><th>Word</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td>Yes/no</td><td class="ar-cell">هَلْ / أَ</td><td><span class="ar">هَلْ أَنْتَ طَالِبٌ؟</span> <span class="translit">hal anta ṭālibun?</span> "Are you a student?"</td></tr>
+            <tr><td>What</td><td class="ar-cell">مَا / مَاذَا</td><td><span class="ar">مَا اسْمُكَ؟</span> <span class="translit">mā ismuka?</span> "What is your name?"</td></tr>
+            <tr><td>Who</td><td class="ar-cell">مَنْ</td><td><span class="ar">مَنْ أَنْتَ؟</span> <span class="translit">man anta?</span> "Who are you?"</td></tr>
+            <tr><td>Where</td><td class="ar-cell">أَيْنَ</td><td><span class="ar">أَيْنَ البَيْتُ؟</span> <span class="translit">ayna l-baytu?</span> "Where is the house?"</td></tr>
+            <tr><td>When</td><td class="ar-cell">مَتَى</td><td><span class="ar">مَتَى وَصَلْتَ؟</span> <span class="translit">matā waṣalta?</span> "When did you arrive?"</td></tr>
+            <tr><td>Why</td><td class="ar-cell">لِمَاذَا</td><td><span class="ar">لِمَاذَا؟</span> <span class="translit">limādhā?</span> "Why?"</td></tr>
+            <tr><td>How</td><td class="ar-cell">كَيْفَ</td><td><span class="ar">كَيْفَ حَالُكَ؟</span> <span class="translit">kayfa ḥāluka?</span> "How are you?"</td></tr>
+            <tr><td>How many</td><td class="ar-cell">كَمْ</td><td><span class="ar">كَمْ كِتَابًا؟</span> <span class="translit">kam kitāban?</span> "How many books?"</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="muted">Note كم forces the counted noun into the singular accusative (kitāban, not kutub) — one of several small quirks around Arabic numbers covered on the <a href="vocabulary.html#numbers">vocabulary page</a>.</p>
+
+      <h2 id="negation-sentences">Negating each sentence type</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Sentence type</th><th>Negator</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td>Nominal, present</td><td class="ar-cell">لَيْسَ</td><td><span class="ar">البَيْتُ لَيْسَ كَبِيرًا</span> <span class="translit">al-baytu laysa kabīran</span> "The house isn't big"</td></tr>
+            <tr><td>Verbal, past</td><td class="ar-cell">لَمْ + jussive</td><td><span class="ar">لَمْ يَكْتُبْ</span> <span class="translit">lam yaktub</span> "He didn't write"</td></tr>
+            <tr><td>Verbal, present</td><td class="ar-cell">لَا</td><td><span class="ar">لَا يَكْتُبُ</span> <span class="translit">lā yaktubu</span> "He doesn't write"</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><span class="ar">لَيْسَ</span> (<span class="translit">laysa</span>) is grammatically a verb ("to not be") even though it negates a verbless sentence — it conjugates like a past-tense verb (laysa, laysat, lastu…) but is always translated as a present-tense "is not/am not/are not".</p>
+
+      <h2 id="word-order-flex">How much can word order actually move?</h2>
+      <p>
+        Beyond VSO and SVO, Arabic allows fronting almost any element for emphasis — object-first sentences
+        exist for contrast ("<em>the letter</em>, the boy wrote"), and question words always move to the very
+        front regardless of their grammatical role. What stays fixed: adjectives always follow their noun, and
+        the possessor in an iḍāfa always comes second. Those two rules almost never bend.
+      </p>
+
+    </main>
+    <footer class="site-footer" style="margin:0 32px;">
+      arabic.ai — an open-source, practical Arabic learning reference. See <a href="resources.html" style="color:var(--gold-soft);">Sources &amp; Contributing</a>.
+    </footer>
+    </div>
+  </div>
+
+  <aside class="toc"><div class="toc-inner"><div class="toc-label">On this page</div><div class="toc-list"></div></div></aside>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

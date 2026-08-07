@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Build: Projects — arabic.ai</title>
+<meta name="description" content="Three small, readable JavaScript projects to fork: an Arabic transliteration converter, a root expander, and a verb conjugation drill.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="flex items-center gap-3">
+    <button class="menu-toggle btn btn-ghost" aria-label="Toggle navigation">☰</button>
+    <a href="index.html" class="brand"><span class="brand-ar">ع</span><span>arabic<span class="brand-dot">.ai</span></span></a>
+  </div>
+  <div class="topbar-actions">
+    <button id="translit-toggle" class="btn btn-ghost"></button>
+    <a class="btn btn-gold" href="https://github.com/" target="_blank" rel="noopener">★ Star on GitHub</a>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="sidebar">
+    <div class="sidebar-group"><div class="sidebar-label">Start</div><a href="index.html">Overview</a></div>
+    <div class="sidebar-group">
+      <div class="sidebar-label">Learn</div>
+      <a href="alphabet.html">Alphabet &amp; Script</a>
+      <a href="phonetics.html">Pronunciation &amp; Phonetics</a>
+      <a href="grammar.html">Grammar Deep-Dive</a>
+      <a href="verbs.html">Verbs &amp; Conjugation</a>
+      <a href="sentences.html">Sentence Structure</a>
+      <a href="vocabulary.html">Practical Vocabulary</a>
+    </div>
+    <div class="sidebar-group"><div class="sidebar-label">Practice</div><a href="practice.html">Q&amp;A + Quiz</a><a href="projects.html">Build: Projects</a></div>
+    <div class="sidebar-group"><div class="sidebar-label">Reference</div><a href="resources.html">Sources &amp; Contributing</a></div>
+  </nav>
+
+  <div class="content-wrap with-toc">
+    <div class="col">
+    <main class="page" id="main">
+
+      <div class="eyebrow">Practice</div>
+      <h1 class="page-title">Build: Projects</h1>
+      <p class="page-dek">Three small, dependency-free JavaScript tools, live on this page and fully readable in <span class="tok">js/projects-demo.js</span> and <span class="tok">js/data.js</span>. Fork the repo and extend any of them.</p>
+
+      <h2 id="transliterator">Project 1 — Arabic → Latin transliteration converter</h2>
+      <p>
+        A live text converter that walks an Arabic string character by character and looks each one up in a
+        translation table. It's deliberately naive — a good first exercise is making it context-aware (for
+        example, handling <span class="ar">ال</span> + sun letters correctly, per the
+        <a href="alphabet.html#sun-moon">sun/moon rule</a>).
+      </p>
+      <div class="quiz-box">
+        <label class="field-label" for="translit-input">Type or paste Arabic</label>
+        <textarea id="translit-input" class="field" dir="rtl" placeholder="اكتب هنا...">مرحبا بكم في arabic.ai</textarea>
+        <label class="field-label" style="margin-top:14px;">Transliteration output</label>
+        <div id="translit-output" class="field translit" style="min-height:2.5em; white-space:pre-wrap;"></div>
+      </div>
+      <div class="code-block">
+        <div class="code-block-head"><span>js/projects-demo.js — excerpt</span><button class="copy-btn">Copy</button></div>
+        <pre><code>function convert(text) {
+  return [...text]
+    .map(ch => (ch in TRANSLIT_MAP ? TRANSLIT_MAP[ch] : ch))
+    .join("");
+}
+
+input.addEventListener("input", () => {
+  output.textContent = convert(input.value) || "—";
+});</code></pre>
+      </div>
+      <div class="note">
+        <div class="note-title">Ways to extend this</div>
+        Handle tāʾ marbūṭa contextually (silent vs. "-at"), collapse a hamza-carrying letter down to a single
+        ʾ symbol, or add a reverse mode (Latin → Arabic) using a fuzzy best-match lookup instead of exact keys.
+      </div>
+
+      <h2 id="root-expander">Project 2 — Root expander</h2>
+      <p>
+        Pick a triliteral root and see its derived word family rendered from data, the same renderer that
+        powers the "root card" component used throughout this site.
+      </p>
+      <div class="quiz-box">
+        <label class="field-label" for="root-select">Choose a root</label>
+        <select id="root-select" class="field"></select>
+        <div id="root-expander-output" class="root-derivations" style="margin-top:16px; display:flex; flex-wrap:wrap; gap:14px 22px;"></div>
+      </div>
+      <div class="code-block">
+        <div class="code-block-head"><span>js/data.js — a root entry</span><button class="copy-btn">Copy</button></div>
+        <pre><code>{ root: ["ك","ت","ب"], gloss: "the idea of writing", words: [
+    { ar: "كَتَبَ", translit: "kataba", en: "he wrote" },
+    { ar: "كِتَاب", translit: "kitāb",  en: "book" },
+    { ar: "مَكْتَب", translit: "maktab", en: "desk / office" },
+    { ar: "كَاتِب", translit: "kātib",  en: "writer" },
+    { ar: "مَكْتَبَة", translit: "maktaba", en: "library" },
+]}</code></pre>
+      </div>
+      <div class="note">
+        <div class="note-title">Ways to extend this</div>
+        Add more roots to the <span class="tok">ROOTS</span> array in <span class="tok">js/data.js</span> — no
+        other code changes needed, since the renderer is fully data-driven. A bigger upgrade: generate
+        derivations programmatically from a root plus a list of known patterns, instead of hand-listing words.
+      </div>
+
+      <h2 id="drill">Project 3 — Verb conjugation drill</h2>
+      <p>
+        Pulls a random pronoun from the <span class="tok">VERB_KATABA</span> paradigm (see the
+        <a href="verbs.html#full-conjugation">full table</a>) and checks your typed answer, ignoring diacritics
+        so you're not penalized for typing without full vowel marks.
+      </p>
+      <div class="quiz-box">
+        <label class="field-label" for="drill-tense">Tense</label>
+        <select id="drill-tense" class="field" style="max-width:200px;">
+          <option value="past">Past</option>
+          <option value="present">Present</option>
+        </select>
+        <p id="drill-prompt" class="quiz-q" style="margin-top:16px;"></p>
+        <input id="drill-input" class="field ar" dir="rtl" type="text" placeholder="اكتب الإجابة هنا">
+        <div class="flex gap-2" style="margin-top:10px;">
+          <button id="drill-check" class="btn btn-gold">Check answer</button>
+        </div>
+        <div id="drill-status" class="quiz-status"></div>
+      </div>
+      <div class="code-block">
+        <div class="code-block-head"><span>js/projects-demo.js — excerpt</span><button class="copy-btn">Copy</button></div>
+        <pre><code>function stripDiacritics(s) {
+  return s.normalize("NFC").replace(/[\u064B-\u0652\u0670]/g, "").trim();
+}
+
+checkBtn.addEventListener("click", () => {
+  const guess = stripDiacritics(inputEl.value);
+  const answer = stripDiacritics(current.ar);
+  statusEl.textContent = (guess === answer)
+    ? "✓ Correct — " + current.ar
+    : "Answer: " + current.ar;
+});</code></pre>
+      </div>
+      <div class="note">
+        <div class="note-title">Ways to extend this</div>
+        Add more Form-I roots as separate paradigm objects, track a running score in
+        <span class="tok">localStorage</span> the way the transliteration toggle already does in
+        <span class="tok">js/main.js</span>, or add a "hint" button that reveals just the prefix/suffix.
+      </div>
+
+      <h2 id="ideas">Open project ideas for the repo</h2>
+      <p>Good first issues for <span class="tok">arabic.ai</span> if you're forking it:</p>
+      <ul>
+        <li><strong>Audio pronunciation:</strong> attach recorded or synthesized audio to each alphabet flashcard.</li>
+        <li><strong>Handwriting practice:</strong> a canvas-based tracing exercise for each letter's four forms.</li>
+        <li><strong>Spaced repetition:</strong> turn the vocabulary tables into a proper SRS deck with localStorage-backed review intervals.</li>
+        <li><strong>Broken-plural predictor:</strong> a small pattern-matcher that guesses a noun's plural pattern from its singular shape.</li>
+        <li><strong>i'rāb visualizer:</strong> color-code a pasted sentence by grammatical case once the user marks each word's role.</li>
+      </ul>
+      <p>See <a href="resources.html#contributing">Sources &amp; Contributing</a> for how to submit one.</p>
+
+    </main>
+    <footer class="site-footer" style="margin:0 32px;">
+      arabic.ai — an open-source, practical Arabic learning reference. See <a href="resources.html" style="color:var(--gold-soft);">Sources &amp; Contributing</a>.
+    </footer>
+    </div>
+  </div>
+
+  <aside class="toc"><div class="toc-inner"><div class="toc-label">On this page</div><div class="toc-list"></div></div></aside>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/projects-demo.js"></script>
+</body>
+</html>

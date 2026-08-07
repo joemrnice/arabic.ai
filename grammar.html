@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grammar Deep-Dive — arabic.ai</title>
+<meta name="description" content="Arabic grammar: gender, number, the case system (iʿrāb), definiteness, iḍāfa possession, adjective agreement, demonstratives, and pronouns.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="flex items-center gap-3">
+    <button class="menu-toggle btn btn-ghost" aria-label="Toggle navigation">☰</button>
+    <a href="index.html" class="brand"><span class="brand-ar">ع</span><span>arabic<span class="brand-dot">.ai</span></span></a>
+  </div>
+  <div class="topbar-actions">
+    <button id="translit-toggle" class="btn btn-ghost"></button>
+    <a class="btn btn-gold" href="https://github.com/" target="_blank" rel="noopener">★ Star on GitHub</a>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="sidebar">
+    <div class="sidebar-group"><div class="sidebar-label">Start</div><a href="index.html">Overview</a></div>
+    <div class="sidebar-group">
+      <div class="sidebar-label">Learn</div>
+      <a href="alphabet.html">Alphabet &amp; Script</a>
+      <a href="phonetics.html">Pronunciation &amp; Phonetics</a>
+      <a href="grammar.html">Grammar Deep-Dive</a>
+      <a href="verbs.html">Verbs &amp; Conjugation</a>
+      <a href="sentences.html">Sentence Structure</a>
+      <a href="vocabulary.html">Practical Vocabulary</a>
+    </div>
+    <div class="sidebar-group"><div class="sidebar-label">Practice</div><a href="practice.html">Q&amp;A + Quiz</a><a href="projects.html">Build: Projects</a></div>
+    <div class="sidebar-group"><div class="sidebar-label">Reference</div><a href="resources.html">Sources &amp; Contributing</a></div>
+  </nav>
+
+  <div class="content-wrap with-toc">
+    <div class="col">
+    <main class="page" id="main">
+
+      <div class="eyebrow">Learn · 03</div>
+      <h1 class="page-title">Grammar Deep-Dive</h1>
+      <p class="page-dek">Nouns, gender, number, case endings, possession, and agreement — the machinery that decides how words change shape around each other.</p>
+
+      <h2 id="gender">Gender: only two, and mostly predictable</h2>
+      <p>
+        Every Arabic noun is either masculine or feminine — there is no neuter. The single strongest signal is
+        the letter <span class="ar">ة</span> (tāʾ marbūṭa) at the end of a word: nouns ending in it are almost
+        always feminine. Human nouns generally follow biological sex; most other feminine nouns are simply
+        feminine by convention and have to be learned, though a few patterns help (cities and countries,
+        paired body parts, and most abstract nouns tend to be feminine).
+      </p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Masculine</th><th>Feminine</th><th>Pattern</th></tr></thead>
+          <tbody>
+            <tr><td class="ar-cell">مُعَلِّم<br><span class="translit-cell translit">muʿallim</span></td><td class="ar-cell">مُعَلِّمَة<br><span class="translit-cell translit">muʿallima</span></td><td>+ ة for the female form of a person</td></tr>
+            <tr><td class="ar-cell">طَالِب<br><span class="translit-cell translit">ṭālib</span></td><td class="ar-cell">طَالِبَة<br><span class="translit-cell translit">ṭāliba</span></td><td>+ ة again</td></tr>
+            <tr><td class="ar-cell">كَبِير<br><span class="translit-cell translit">kabīr</span> "big"</td><td class="ar-cell">كَبِيرَة<br><span class="translit-cell translit">kabīra</span></td><td>Adjectives take ة to agree with a feminine noun</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="number">Number: singular, dual, and plural</h2>
+      <p>
+        Arabic marks three numbers, not two — this is one of its most distinctive features for English
+        speakers, who only distinguish singular/plural.
+      </p>
+      <ul>
+        <li><strong>Singular</strong> — one of something: <span class="ar">كِتَاب</span> <span class="translit">kitāb</span> ("a book")</li>
+        <li><strong>Dual</strong> — exactly two, marked with the suffix <span class="tok">ـَانِ / ـَيْنِ</span>: <span class="ar">كِتَابَانِ</span> <span class="translit">kitābāni</span> ("two books")</li>
+        <li><strong>Plural</strong> — three or more. Arabic plurals split into two systems:
+          <ul>
+            <li><strong>Sound plurals</strong> — a regular suffix added to the singular. Masculine sound plural: <span class="ar">مُعَلِّمُونَ</span> <span class="translit">muʿallimūna</span> ("teachers, m."). Feminine sound plural: <span class="ar">مُعَلِّمَاتٌ</span> <span class="translit">muʿallimātun</span> ("teachers, f.").</li>
+            <li><strong>Broken plurals</strong> — the internal vowel pattern changes instead, the way English "mouse → mice" breaks the normal "-s" rule, except in Arabic this irregular-looking process is actually the majority pattern for plurals: <span class="ar">كِتَاب</span> → <span class="ar">كُتُب</span> (<span class="translit">kitāb → kutub</span>), <span class="ar">قَلَم</span> → <span class="ar">أَقْلَام</span> (<span class="translit">qalam → aqlām</span>, "pen(s)").</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="note gold">
+        <div class="note-title">The rule that surprises everyone</div>
+        Non-human plurals (objects, animals, abstract things — anything that isn't a person) are grammatically
+        treated as <strong>feminine singular</strong> for agreement purposes, no matter how many there are.
+        "The books are big" is literally <span class="ar">الكُتُبُ كَبِيرَةٌ</span> — <span class="translit">al-kutubu kabīratun</span>,
+        using the feminine singular adjective <span class="translit">kabīra</span>, not a plural adjective.
+      </div>
+
+      <h2 id="definiteness">Definiteness: ال and its absence</h2>
+      <p>
+        Arabic has a definite article, <span class="ar">ال</span> (<span class="translit">al-</span>, "the"),
+        prefixed directly onto the noun with no space — but no indefinite article ("a/an"). A bare noun is
+        automatically indefinite. In careful/formal speech, indefinite nouns also take a final
+        <strong>tanwīn</strong> (see the <a href="phonetics.html#vowels">phonetics page</a>) that spoken
+        colloquial Arabic usually drops.
+      </p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Indefinite</th><th>Definite</th></tr></thead>
+          <tbody>
+            <tr><td class="ar-cell">بَيْتٌ<br><span class="translit">baytun</span> — "a house"</td><td class="ar-cell">البَيْتُ<br><span class="translit">al-baytu</span> — "the house"</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="muted">Remember: if the noun starts with a <a href="alphabet.html#sun-moon">sun letter</a>, the ل of ال is silent and the following consonant doubles instead — spelled the same, pronounced differently.</p>
+
+      <h2 id="cases">The case system (iʿrāb)</h2>
+      <p>
+        Formal Arabic marks a noun's grammatical role with a short vowel ending — a feature mostly silent in
+        casual speech but fully present in careful reading, news broadcasting, and the Qurʾān. There are three cases:
+      </p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Case</th><th>Used for</th><th>Typical ending</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Nominative</strong> (marfūʿ)</td><td>The subject of a sentence</td><td class="translit-cell">-u / -un</td><td><span class="ar">الوَلَدُ</span> <span class="translit">al-waladu</span> "the boy" (as subject)</td></tr>
+            <tr><td><strong>Accusative</strong> (manṣūb)</td><td>The direct object</td><td class="translit-cell">-a / -an</td><td><span class="ar">رَأَيْتُ الوَلَدَ</span> <span class="translit">raʾaytu l-walada</span> "I saw the boy"</td></tr>
+            <tr><td><strong>Genitive</strong> (majrūr)</td><td>After a preposition, or as the second noun in iḍāfa</td><td class="translit-cell">-i / -in</td><td><span class="ar">فِي البَيْتِ</span> <span class="translit">fī l-bayti</span> "in the house"</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        These endings are why Arabic word order can be flexible — the case ending, not position, tells you
+        who did what to whom, similar in spirit (though not mechanism) to Latin or German case endings.
+      </p>
+
+      <h2 id="idafa">Iḍāfa: the possessive construction</h2>
+      <p>
+        Arabic has no separate word for "of" or a possessive apostrophe. Instead, two nouns are placed directly
+        next to each other in a fixed structure called <strong>iḍāfa</strong> ("addition"): the first noun
+        (the thing possessed) drops its definite article and any tanwīn, and the second noun (the possessor)
+        takes the genitive case and carries the definiteness for the whole phrase.
+      </p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Arabic</th><th>Literal structure</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td class="ar-cell">بَيْتُ الرَّجُلِ<br><span class="translit">baytu r-rajuli</span></td><td>house-of the-man <em>(genitive)</em></td><td>"the man's house"</td></tr>
+            <tr><td class="ar-cell">كِتَابُ طَالِبٍ<br><span class="translit">kitābu ṭālibin</span></td><td>book-of a-student</td><td>"a student's book"</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="muted">Chains longer than two nouns are possible — "the door of the house of the man" — each link staying genitive except the very first noun.</p>
+
+      <h2 id="adjectives">Adjectives: they follow, and they agree</h2>
+      <p>
+        Adjectives come <strong>after</strong> the noun they describe (the reverse of English) and must agree
+        with it in gender, number, case, <em>and</em> definiteness:
+      </p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Arabic</th><th>Word-for-word</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td class="ar-cell">بَيْتٌ كَبِيرٌ<br><span class="translit">baytun kabīrun</span></td><td>house-indef. big-indef.</td><td>"a big house"</td></tr>
+            <tr><td class="ar-cell">البَيْتُ الكَبِيرُ<br><span class="translit">al-baytu l-kabīru</span></td><td>the-house the-big</td><td>"the big house" — both words take ال</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note brick">
+        <div class="note-title">Where the "sentence" hides</div>
+        Drop the article from just the adjective — <span class="ar">البَيْتُ كَبِيرٌ</span>
+        (<span class="translit">al-baytu kabīrun</span>) — and the phrase becomes a full sentence: "the house
+        is big". Definiteness mismatch is what turns a description into a predicate. See
+        <a href="sentences.html#nominal">nominal sentences</a>.
+      </div>
+
+      <h2 id="pronouns">Personal pronouns</h2>
+      <p>Arabic distinguishes gender in the 2nd and 3rd person (English doesn't, beyond he/she), and has a dual form no English pronoun matches.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Person</th><th>Detached (subject)</th><th>Attached (possessive/object suffix)</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td>I</td><td class="ar-cell">أَنَا</td><td class="ar-cell">ـِي / ـنِي</td><td><span class="ar">كِتَابِي</span> <span class="translit">kitābī</span> "my book"</td></tr>
+            <tr><td>you (m.)</td><td class="ar-cell">أَنْتَ</td><td class="ar-cell">ـكَ</td><td><span class="ar">كِتَابُكَ</span> <span class="translit">kitābuka</span></td></tr>
+            <tr><td>you (f.)</td><td class="ar-cell">أَنْتِ</td><td class="ar-cell">ـكِ</td><td><span class="ar">كِتَابُكِ</span> <span class="translit">kitābuki</span></td></tr>
+            <tr><td>he</td><td class="ar-cell">هُوَ</td><td class="ar-cell">ـهُ</td><td><span class="ar">كِتَابُهُ</span> <span class="translit">kitābuhu</span></td></tr>
+            <tr><td>she</td><td class="ar-cell">هِيَ</td><td class="ar-cell">ـهَا</td><td><span class="ar">كِتَابُهَا</span> <span class="translit">kitābuhā</span></td></tr>
+            <tr><td>we</td><td class="ar-cell">نَحْنُ</td><td class="ar-cell">ـنَا</td><td><span class="ar">كِتَابُنَا</span> <span class="translit">kitābunā</span></td></tr>
+            <tr><td>you two</td><td class="ar-cell">أَنْتُمَا</td><td class="ar-cell">ـكُمَا</td><td><span class="ar">كِتَابُكُمَا</span></td></tr>
+            <tr><td>they two</td><td class="ar-cell">هُمَا</td><td class="ar-cell">ـهُمَا</td><td><span class="ar">كِتَابُهُمَا</span></td></tr>
+            <tr><td>you (m. pl.)</td><td class="ar-cell">أَنْتُمْ</td><td class="ar-cell">ـكُمْ</td><td><span class="ar">كِتَابُكُمْ</span></td></tr>
+            <tr><td>you (f. pl.)</td><td class="ar-cell">أَنْتُنَّ</td><td class="ar-cell">ـكُنَّ</td><td><span class="ar">كِتَابُكُنَّ</span></td></tr>
+            <tr><td>they (m.)</td><td class="ar-cell">هُمْ</td><td class="ar-cell">ـهُمْ</td><td><span class="ar">كِتَابُهُمْ</span></td></tr>
+            <tr><td>they (f.)</td><td class="ar-cell">هُنَّ</td><td class="ar-cell">ـهُنَّ</td><td><span class="ar">كِتَابُهُنَّ</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Attached pronouns don't just mark possession on nouns — the same suffixes attach to verbs to mark a direct object (<span class="ar">رَأَيْتُهُ</span> <span class="translit">raʾaytuhu</span>, "I saw him") and to prepositions (<span class="ar">لَهُ</span> <span class="translit">lahu</span>, "to/for him").</p>
+
+      <h2 id="demonstratives">Demonstratives: this and that</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th></th><th>Masculine</th><th>Feminine</th></tr></thead>
+          <tbody>
+            <tr><td>this</td><td class="ar-cell">هَذَا <span class="translit">hādhā</span></td><td class="ar-cell">هَذِهِ <span class="translit">hādhihi</span></td></tr>
+            <tr><td>that</td><td class="ar-cell">ذَلِكَ <span class="translit">dhālika</span></td><td class="ar-cell">تِلْكَ <span class="translit">tilka</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="root-vs-pattern">Root and pattern: the grammar behind the vocabulary</h2>
+      <p>
+        The concept introduced on the <a href="index.html#every-dot">home page</a> is itself a grammar topic:
+        Arabic morphology layers a fixed <strong>vowel pattern</strong> (called a <em>wazn</em>, "measure")
+        onto a <strong>consonantal root</strong>. The pattern <span class="tok">maCCaC</span> tends to produce
+        a place noun; the pattern <span class="tok">CāCiC</span> tends to produce an active participant/doer.
+        Once you recognize a handful of patterns, unfamiliar words become guessable rather than opaque.
+      </p>
+      <div class="root-card" data-root-card="1"></div>
+
+    </main>
+    <footer class="site-footer" style="margin:0 32px;">
+      arabic.ai — an open-source, practical Arabic learning reference. See <a href="resources.html" style="color:var(--gold-soft);">Sources &amp; Contributing</a>.
+    </footer>
+    </div>
+  </div>
+
+  <aside class="toc"><div class="toc-inner"><div class="toc-label">On this page</div><div class="toc-list"></div></div></aside>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

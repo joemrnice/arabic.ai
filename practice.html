@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q&A + Quiz — arabic.ai</title>
+<meta name="description" content="Practical Arabic learning Q&A covering the small details learners actually get stuck on, plus an interactive quiz.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="flex items-center gap-3">
+    <button class="menu-toggle btn btn-ghost" aria-label="Toggle navigation">☰</button>
+    <a href="index.html" class="brand"><span class="brand-ar">ع</span><span>arabic<span class="brand-dot">.ai</span></span></a>
+  </div>
+  <div class="topbar-actions">
+    <button id="translit-toggle" class="btn btn-ghost"></button>
+    <a class="btn btn-gold" href="https://github.com/" target="_blank" rel="noopener">★ Star on GitHub</a>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="sidebar">
+    <div class="sidebar-group"><div class="sidebar-label">Start</div><a href="index.html">Overview</a></div>
+    <div class="sidebar-group">
+      <div class="sidebar-label">Learn</div>
+      <a href="alphabet.html">Alphabet &amp; Script</a>
+      <a href="phonetics.html">Pronunciation &amp; Phonetics</a>
+      <a href="grammar.html">Grammar Deep-Dive</a>
+      <a href="verbs.html">Verbs &amp; Conjugation</a>
+      <a href="sentences.html">Sentence Structure</a>
+      <a href="vocabulary.html">Practical Vocabulary</a>
+    </div>
+    <div class="sidebar-group"><div class="sidebar-label">Practice</div><a href="practice.html">Q&amp;A + Quiz</a><a href="projects.html">Build: Projects</a></div>
+    <div class="sidebar-group"><div class="sidebar-label">Reference</div><a href="resources.html">Sources &amp; Contributing</a></div>
+  </nav>
+
+  <div class="content-wrap with-toc">
+    <div class="col">
+    <main class="page" id="main">
+
+      <div class="eyebrow">Practice</div>
+      <h1 class="page-title">Q&amp;A + Quiz</h1>
+      <p class="page-dek">The specific questions learners actually ask, answered directly — followed by a short quiz pulled from every section of the guide.</p>
+
+      <h2 id="faq">Frequently asked, specifically</h2>
+      <div id="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span><span class="qnum">01</span>Why do ب ت ث look almost identical?</span><span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">They share the exact same base skeleton — only the dots differ (one below for ب, two above for ت, three above for ث). Arabic reuses letter skeletons across families this way; see the <a href="alphabet.html#dots" style="color:var(--gold-soft);">full dot breakdown</a>.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span><span class="qnum">02</span>Do I have to write the short vowel marks (ḥarakāt)?</span><span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Not in normal adult writing — newspapers, novels, and everyday text drop them entirely. They mainly appear in children's books, the Qurʾān, dictionaries, and language-learning material, exactly where this guide uses them: as training wheels for reading.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span><span class="qnum">03</span>What's the actual difference between ة and ه?</span><span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">ة (tāʾ marbūṭa) only ever occurs at the end of a word and marks feminine gender; it's pronounced as a light "a" in pausal speech or "-at" before a following word in careful/connected speech. ه (hāʾ) is a full, ordinary consonant "h" that can appear anywhere in a word. They only look similar in final position — compare their <a href="alphabet.html#table" style="color:var(--gold-soft);">isolated forms</a> and you'll see ة keeps two dots.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span><span class="qnum">04</span>How do I know which seat hamza sits on?</span><span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Roughly: an i-vowel nearby pulls hamza onto ي (dotless, ئ); a u-vowel pulls it onto و (ؤ); an a-vowel or a word-initial position puts it on ا (أgoing up for a/u, إ going down for i). At the end of a word after a long vowel, or between two long vowels, it often sits alone on the line (ء). See the full breakdown on the <a href="phonetics.html#hamza" style="color:var(--gold-soft);">phonetics page</a> — and when genuinely unsure, look the word up rather than guess, since this is one of the few areas even native speakers occasionally disagree on.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span><span class="qnum">05</span>Is Arabic read right to left completely, including numbers?</span><span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Text and letters flow right to left, but multi-digit numbers are written left to right, the same direction as in English — so a phone number or a price reads in the "wrong" direction relative to the rest of the line. Your eye genuinely has to switch direction mid-sentence.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span><span class="qnum">06</span>Why does الشمس sound like "ash-shams" and not "al-shams"?</span><span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">ش is a "sun letter". When the definite article ال is attached to a word starting with one of the 14 sun letters, the ل silently assimilates into the following consonant, doubling it instead of being pronounced itself. It's still spelled with the ل — only the pronunciation changes. Full list on the <a href="alphabet.html#sun-moon" style="color:var(--gold-soft);">alphabet page</a>.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span><span class="qnum">07</span>What's genuinely the hardest sound for English speakers?</span><span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Almost universally ع (ʿayn) — a voiced pharyngeal fricative with no equivalent anywhere in English. ح (its voiceless twin) and ض (the emphatic ḍād) are the usual runners-up. All three are covered with practice tips on the <a href="phonetics.html#throat-letters" style="color:var(--gold-soft);">phonetics page</a>.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span><span class="qnum">08</span>Why do adjectives come after the noun?</span><span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">It's simply the fixed word order in Arabic — noun first, then any adjectives describing it, each one agreeing in gender, number, case, and definiteness. There's no deeper trick to it beyond memorizing the order is reversed from English.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span><span class="qnum">09</span>Why is "the big house" spelled with ال twice?</span><span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Because the adjective has to agree with the noun in definiteness too, not just gender and number: البيت الكبير, literally "the-house the-big". Drop the article from only the adjective and the same two words become a sentence instead of a phrase — see <a href="grammar.html#adjectives" style="color:var(--gold-soft);">adjective agreement</a>.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span><span class="qnum">10</span>Do all plurals just add a suffix, like English "-s"?</span><span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">No — the majority of Arabic plurals are "broken", meaning the internal vowel pattern changes instead of (or as well as) adding a suffix: كتاب → كتب. Regular suffix-based "sound" plurals exist too, but broken plurals are the norm, not the exception. See <a href="grammar.html#number" style="color:var(--gold-soft);">number</a>.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span><span class="qnum">11</span>Why is "the books are big" grammatically singular?</span><span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Because non-human plurals take feminine-singular agreement regardless of how many items there are — a rule with no real English analogue. الكتب كبيرة uses the singular feminine adjective كبيرة, not a plural form. Covered in the <a href="grammar.html#number" style="color:var(--gold-soft);">grammar page's number section</a>.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span><span class="qnum">12</span>What is "gender polarity" with numbers?</span><span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">For numbers 3–10, the number's grammatical gender flips relative to the noun it counts: counting masculine nouns uses the feminine-looking form of the number (ending in ة), and counting feminine nouns uses the masculine-looking form. It looks backwards because, relative to every other agreement rule in Arabic, it is. See <a href="vocabulary.html#numbers" style="color:var(--gold-soft);">numbers</a>.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span><span class="qnum">13</span>What actually is iʿrāb, practically?</span><span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">A short vowel (or tanwīn) added to the end of a noun or verb marking its grammatical role — subject, object, possessor, and so on. It's mostly silent in casual conversation but pronounced in formal reading, news broadcasting, and Qurʾānic recitation. See the <a href="grammar.html#cases" style="color:var(--gold-soft);">case system</a>.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span><span class="qnum">14</span>How is possession expressed without a word for "of"?</span><span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Through iḍāfa: two nouns placed directly next to each other, with the possessed noun first (losing its own ال/tanwīn) and the possessor second in the genitive case. بيت الرجل, literally "house-of the-man". See <a href="grammar.html#idafa" style="color:var(--gold-soft);">iḍāfa</a>.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span><span class="qnum">15</span>Is Arabic word order really flexible, or is that a myth?</span><span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">It's real but bounded: the formal default for verbal sentences is Verb–Subject–Object, SVO is also common and fully grammatical, and elements can be fronted for emphasis — but adjectives always follow their noun and the possessor in iḍāfa always comes second. See <a href="sentences.html#word-order-flex" style="color:var(--gold-soft);">word order</a>.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span><span class="qnum">16</span>Why does past-tense negation use a "present" verb form?</span><span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">لَمْ negates the past by pairing with the present-tense verb put into the jussive mood (لَمْ أَكْتُبْ, "I did not write") — a genuine historical quirk of the grammar, not an error. See <a href="verbs.html#negation" style="color:var(--gold-soft);">negating verbs</a>.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span><span class="qnum">17</span>What is a "root" versus a "pattern", concretely?</span><span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">The root is a set of (usually three) consonants carrying a core, abstract meaning — ك ت ب relates to writing. The pattern is the scaffold of vowels, prefixes, and doubled letters wrapped around that root to produce a specific word: kataba (he wrote), kitāb (book), maktab (office), kātib (writer) are the same root in four different patterns. See <a href="index.html#every-dot" style="color:var(--gold-soft);">the home page</a> and <a href="verbs.html#root-pattern" style="color:var(--gold-soft);">verb forms</a>.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span><span class="qnum">18</span>Do I need to learn Modern Standard Arabic or a dialect first?</span><span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">This guide teaches MSA, the shared formal register understood across every Arabic-speaking country and used in writing, news, and education. It's the most useful starting point precisely because every regional dialect is a variation on it — once MSA is solid, picking up a dialect for a specific country is much faster than the reverse.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span><span class="qnum">19</span>What does shadda actually sound like — is it just emphasis?</span><span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">It's not stress or emphasis — it's a genuinely doubled consonant, held for roughly twice the normal duration, the way Italian doubles consonants in words like "pizza". مُدَرِّس (mudarris, "teacher") has an audibly longer ر than a single-ر word would. See <a href="phonetics.html#vowels" style="color:var(--gold-soft);">vowels &amp; marks</a>.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span><span class="qnum">20</span>Why do some letters not connect to the next one?</span><span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Six letters — ا د ذ ر ز و — historically never developed a connecting stroke on their left side, so whatever comes after them starts a fresh, unconnected shape even mid-word. It's a fixed, memorizable list rather than a rule you can derive. See <a href="alphabet.html#letter-forms" style="color:var(--gold-soft);">letter forms</a>.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span><span class="qnum">21</span>How predictable is Arabic word stress?</span><span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Fairly predictable from syllable weight — stress tends to land on the last "heavy" syllable (closed, or containing a long vowel) rather than being memorized per word the way English stress often has to be. See <a href="phonetics.html#stress" style="color:var(--gold-soft);">word stress</a>.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span><span class="qnum">22</span>What's the difference between emphatic and plain consonants, in practice?</span><span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">Emphatic consonants (ص ض ط ظ) pull the back of the tongue toward the soft palate, which also darkens nearby vowels — a fully separate phoneme from their plain counterparts (س د ت ذ), not just a stylistic variation. Minimal pairs like سيف/صيف exist purely because of this. See <a href="phonetics.html#emphatics" style="color:var(--gold-soft);">emphatics</a>.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span><span class="qnum">23</span>Is there a neuter gender in Arabic, like English "it"?</span><span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">No — every noun is masculine or feminine, with no neuter category at all. Objects and abstract concepts still have to be assigned a gender, which is why gender has to be learned per-word for non-human nouns. See <a href="grammar.html#gender" style="color:var(--gold-soft);">gender</a>.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span><span class="qnum">24</span>What are the ten "verb forms" people mention?</span><span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">A traditional numbered classification (I–X) of the derivational patterns a root can take, each shifting meaning in a predictable direction — causative, reciprocal, reflexive, and so on. Every dictionary entry lists which forms a root is attested in. Full table on the <a href="verbs.html#ten-forms" style="color:var(--gold-soft);">verbs page</a>.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span><span class="qnum">25</span>Why does this guide keep the transliteration in monospace with special marks?</span><span class="chev">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">So that one Latin character (or character-plus-mark, like ṣ or ā) always maps to exactly one Arabic sound, unlike ad-hoc transliterations that reuse "kh", "gh", or plain "h" inconsistently. Monospacing also keeps diacritical marks like macrons and underdots visually distinct from ordinary body text.</div></div>
+        </div>
+
+      </div>
+
+      <h2 id="quiz">Quick quiz</h2>
+      <p class="muted" style="margin-top:-8px;">15 questions, shuffled, pulled from every section of the guide.</p>
+      <div id="quiz-root"></div>
+
+    </main>
+    <footer class="site-footer" style="margin:0 32px;">
+      arabic.ai — an open-source, practical Arabic learning reference. See <a href="resources.html" style="color:var(--gold-soft);">Sources &amp; Contributing</a>.
+    </footer>
+    </div>
+  </div>
+
+  <aside class="toc"><div class="toc-inner"><div class="toc-label">On this page</div><div class="toc-list"></div></div></aside>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/quiz.js"></script>
+</body>
+</html>

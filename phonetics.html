@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pronunciation & Phonetics — arabic.ai</title>
+<meta name="description" content="Where every Arabic sound is physically produced, emphatic vs plain consonants, short and long vowels, sukūn, shadda, tanwīn, and hamza rules.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="flex items-center gap-3">
+    <button class="menu-toggle btn btn-ghost" aria-label="Toggle navigation">☰</button>
+    <a href="index.html" class="brand"><span class="brand-ar">ع</span><span>arabic<span class="brand-dot">.ai</span></span></a>
+  </div>
+  <div class="topbar-actions">
+    <button id="translit-toggle" class="btn btn-ghost"></button>
+    <a class="btn btn-gold" href="https://github.com/" target="_blank" rel="noopener">★ Star on GitHub</a>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="sidebar">
+    <div class="sidebar-group"><div class="sidebar-label">Start</div><a href="index.html">Overview</a></div>
+    <div class="sidebar-group">
+      <div class="sidebar-label">Learn</div>
+      <a href="alphabet.html">Alphabet &amp; Script</a>
+      <a href="phonetics.html">Pronunciation &amp; Phonetics</a>
+      <a href="grammar.html">Grammar Deep-Dive</a>
+      <a href="verbs.html">Verbs &amp; Conjugation</a>
+      <a href="sentences.html">Sentence Structure</a>
+      <a href="vocabulary.html">Practical Vocabulary</a>
+    </div>
+    <div class="sidebar-group"><div class="sidebar-label">Practice</div><a href="practice.html">Q&amp;A + Quiz</a><a href="projects.html">Build: Projects</a></div>
+    <div class="sidebar-group"><div class="sidebar-label">Reference</div><a href="resources.html">Sources &amp; Contributing</a></div>
+  </nav>
+
+  <div class="content-wrap with-toc">
+    <div class="col">
+    <main class="page" id="main">
+
+      <div class="eyebrow">Learn · 02</div>
+      <h1 class="page-title">Pronunciation &amp; Phonetics</h1>
+      <p class="page-dek">Arabic has sounds English simply doesn't — most of them made in the throat. Here is exactly where each one is produced, and every diacritic that changes how a letter sounds.</p>
+
+      <h2 id="makharij">Points of articulation (makhārij), throat to lips</h2>
+      <p>
+        Traditional Arabic phonetics organizes the alphabet by where in the mouth and throat each sound is
+        produced — a genuinely physical sequence, not an alphabetical one. Working through it in order, from
+        deepest to shallowest, is the fastest way to build a working "throat map":
+      </p>
+      <div class="table-wrap">
+        <table id="makharij-table">
+          <thead><tr><th>#</th><th>Zone</th><th>Letters</th><th>Notes</th></tr></thead>
+          <tbody id="makharij-tbody"></tbody>
+        </table>
+      </div>
+
+      <h2 id="throat-letters">The throat letters, practically speaking</h2>
+      <p>These six sounds (<span class="ar-lg">ء ه ع ح غ خ</span>) cause the most trouble for English speakers because none of them exist in English. A practical approach:</p>
+      <ul>
+        <li><strong>ه (h)</strong> — identical to English "h". No difficulty here.</li>
+        <li><strong>ء (hamza)</strong> — the catch in your throat in the middle of English "uh-oh". Every Arabic word technically starts with either a hamza or a consonant; you never truly "start with a vowel".</li>
+        <li><strong>ح (ḥāʾ)</strong> — whisper the word "who" while tightening your throat as if fogging a mirror, but keep it voiceless. It should feel like friction, not a cough.</li>
+        <li><strong>ع (ʿayn)</strong> — the same throat constriction as ح, but voiced (add your vocal cords). Often described as a "strangled a" — many learners find it easier to feel than to describe. Practice by gently gagging on an "aaa" sound with the throat tightened.</li>
+        <li><strong>خ (khāʾ)</strong> — like clearing your throat gently, or the "ch" in Scottish "loch".</li>
+        <li><strong>غ (ghayn)</strong> — the voiced twin of خ; close to a French uvular "r", a soft gargle.</li>
+      </ul>
+
+      <h2 id="emphatics">Emphatic vs. plain consonants</h2>
+      <p>
+        Arabic has four "emphatic" (also called velarized or "heavy") consonants, each paired with a plain
+        counterpart. The emphatic version is produced by pulling the back of the tongue up and back toward the
+        soft palate while making the sound — this also darkens the color of nearby vowels, making a following
+        "a" sound closer to "aw" and giving emphatic words a noticeably heavier, rounder quality.
+      </p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Plain</th><th>Emphatic</th><th>What changes</th></tr></thead>
+          <tbody>
+            <tr><td class="ar-cell">س (s)</td><td class="ar-cell">ص (ṣ)</td><td>Tongue pulls back; following vowels sound darker.</td></tr>
+            <tr><td class="ar-cell">د (d)</td><td class="ar-cell">ض (ḍ)</td><td>Same shift; ض is the sound classical scholars called uniquely Arabic.</td></tr>
+            <tr><td class="ar-cell">ت (t)</td><td class="ar-cell">ط (ṭ)</td><td>Heavier, more forceful release than plain ت.</td></tr>
+            <tr><td class="ar-cell">ذ (dh)</td><td class="ar-cell">ظ (ẓ)</td><td>Same interdental placement as ذ, but velarized.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note">
+        <div class="note-title">Quick test</div>
+        Say "Sam" then say "Saum" while pulling your tongue back and rounding slightly — the second is roughly
+        the emphatic feel. Minimal pairs like <span class="ar">سيف</span> <span class="translit">sayf</span>
+        ("sword") vs. <span class="ar">صيف</span> <span class="translit">ṣayf</span> ("summer") exist only
+        because of this single articulatory difference.
+      </div>
+
+      <h2 id="vowels">Short vowels, long vowels, and the marks (ḥarakāt)</h2>
+      <p>
+        Standard Arabic script written for adults and fluent readers normally omits short-vowel marks
+        entirely — readers infer them from context and grammar, the way English speakers don't mark stress.
+        Learning materials (and this guide) add them back in as small marks above or below the letter:
+      </p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Mark</th><th>Name</th><th>Sound</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td class="ar-cell" style="font-size:1.6rem;">بَ</td><td>fatḥa</td><td>short "a"</td><td><span class="ar">كَتَبَ</span> <span class="translit">kataba</span></td></tr>
+            <tr><td class="ar-cell" style="font-size:1.6rem;">بِ</td><td>kasra</td><td>short "i"</td><td><span class="ar">كِتَاب</span> <span class="translit">kitāb</span></td></tr>
+            <tr><td class="ar-cell" style="font-size:1.6rem;">بُ</td><td>ḍamma</td><td>short "u"</td><td><span class="ar">كُتُب</span> <span class="translit">kutub</span></td></tr>
+            <tr><td class="ar-cell" style="font-size:1.6rem;">بْ</td><td>sukūn</td><td>no vowel at all</td><td><span class="ar">يَكْتُبُ</span> <span class="translit">yaktubu</span></td></tr>
+            <tr><td class="ar-cell" style="font-size:1.6rem;">بّ</td><td>shadda</td><td>doubles (geminates) the consonant</td><td><span class="ar">مُدَرِّس</span> <span class="translit">mudarris</span> ("teacher" — the ر is held twice as long)</td></tr>
+            <tr><td class="ar-cell" style="font-size:1.6rem;">بً بٍ بٌ</td><td>tanwīn</td><td>adds a trailing "n" (an, in, un)</td><td><span class="ar">كِتَابٌ</span> <span class="translit">kitābun</span> ("a book")</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        <strong>Long vowels</strong> aren't diacritics at all — they're full letters (ا, و, ي) used to stretch
+        a short vowel to roughly double its length: fatḥa + ا = <span class="translit">ā</span>, ḍamma + و =
+        <span class="translit">ū</span>, kasra + ي = <span class="translit">ī</span>. Vowel length is
+        phonemic in Arabic, meaning it can be the only difference between two otherwise-unrelated words —
+        <span class="ar">كَتَبَ</span> <span class="translit">kataba</span> ("he wrote") is unrelated to a
+        hypothetical <span class="translit">kaataba</span> only by coincidence of this system, but plenty of
+        real pairs like <span class="ar">جَمَل</span> <span class="translit">jamal</span> ("camel") and
+        <span class="ar">جَمِيل</span> <span class="translit">jamīl</span> ("beautiful") are distinguished by
+        exactly this kind of vowel change.
+      </p>
+
+      <h2 id="hamza" data-anchor="hamza">Hamza and its carrier seats</h2>
+      <p>
+        Hamza (ء) represents the glottal stop and is technically a consonant, not a diacritic — but because it
+        has no fixed tall stem of its own, it needs to "sit" on a carrier letter, chosen by the surrounding
+        vowels:
+      </p>
+      <ul>
+        <li><span class="tok">أ</span> — hamza on alif (used when the surrounding vowel is a/u): <span class="ar">أَكَلَ</span> <span class="translit">akala</span> ("he ate")</li>
+        <li><span class="tok">إ</span> — hamza under alif (used with an i-vowel): <span class="ar">إِسْم</span> <span class="translit">ism</span> ("name")</li>
+        <li><span class="tok">ؤ</span> — hamza on wāw (used near u/long-ū): <span class="ar">سُؤَال</span> <span class="translit">suʾāl</span> ("question")</li>
+        <li><span class="tok">ئ</span> — hamza on yāʾ, dotless (used near an i-vowel): <span class="ar">مِائَة</span> <span class="translit">miʾa</span> ("hundred")</li>
+        <li><span class="tok">ء</span> — hamza on the line by itself, typically between two long vowels or at the end of a word after a long vowel: <span class="ar">شَيْء</span> <span class="translit">shayʾ</span> ("thing")</li>
+      </ul>
+      <div class="note brick">
+        <div class="note-title">The seat is not the sound</div>
+        Whichever letter hamza sits on, the sound is still just a glottal stop — أ, إ, ؤ, and ئ are not four
+        different consonants, they're one consonant with four different spellings chosen by context. This
+        trips up almost every learner at some point; when in doubt, it helps to look the exact spelling up
+        rather than guess.
+      </div>
+
+      <h2 id="stress">Word stress</h2>
+      <p>
+        Arabic stress is largely predictable from syllable weight rather than memorized per word: stress
+        tends to fall on the last syllable that is "heavy" — closed (ends in a consonant) or containing a long
+        vowel — counting from the end of the word, skipping the final syllable itself in most dialects of
+        Modern Standard Arabic recitation. In practice: don't stress words the way you'd guess from English
+        — listen for which syllable carries a long vowel or is closed by two consonants, and lean on that one.
+      </p>
+
+      <h2 id="dialect-note">One honest note on dialects</h2>
+      <p>
+        Everything on this page describes <strong>Modern Standard Arabic (MSA)</strong> — the shared,
+        formal register used in writing, news, and education across the Arab world. Spoken dialects (Egyptian,
+        Levantine, Gulf, Maghrebi, and others) diverge from MSA in pronunciation and grammar, sometimes
+        significantly — for example ج is pronounced "g" in Egyptian Arabic, and ق is often dropped to a glottal
+        stop in Levantine urban dialects. Learning MSA first gives you a stable reference point that every
+        dialect is a variation on.
+      </p>
+
+    </main>
+    <footer class="site-footer" style="margin:0 32px;">
+      arabic.ai — an open-source, practical Arabic learning reference. See <a href="resources.html" style="color:var(--gold-soft);">Sources &amp; Contributing</a>.
+    </footer>
+    </div>
+  </div>
+
+  <aside class="toc"><div class="toc-inner"><div class="toc-label">On this page</div><div class="toc-list"></div></div></aside>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+  (function(){
+    const tbody = document.getElementById("makharij-tbody");
+    MAKHARIJ.forEach((row, i) => {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `<td class="translit-cell">${i+1}</td><td>${row.zone}</td><td class="ar-cell">${row.letters.join(" ")}</td><td class="muted">${row.note}</td>`;
+      tbody.appendChild(tr);
+    });
+  })();
+</script>
+</body>
+</html>

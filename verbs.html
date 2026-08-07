@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verbs & Conjugation — arabic.ai</title>
+<meta name="description" content="Arabic verb morphology: root-and-pattern system, the ten verb forms, and a full past/present conjugation table.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="flex items-center gap-3">
+    <button class="menu-toggle btn btn-ghost" aria-label="Toggle navigation">☰</button>
+    <a href="index.html" class="brand"><span class="brand-ar">ع</span><span>arabic<span class="brand-dot">.ai</span></span></a>
+  </div>
+  <div class="topbar-actions">
+    <button id="translit-toggle" class="btn btn-ghost"></button>
+    <a class="btn btn-gold" href="https://github.com/" target="_blank" rel="noopener">★ Star on GitHub</a>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="sidebar">
+    <div class="sidebar-group"><div class="sidebar-label">Start</div><a href="index.html">Overview</a></div>
+    <div class="sidebar-group">
+      <div class="sidebar-label">Learn</div>
+      <a href="alphabet.html">Alphabet &amp; Script</a>
+      <a href="phonetics.html">Pronunciation &amp; Phonetics</a>
+      <a href="grammar.html">Grammar Deep-Dive</a>
+      <a href="verbs.html">Verbs &amp; Conjugation</a>
+      <a href="sentences.html">Sentence Structure</a>
+      <a href="vocabulary.html">Practical Vocabulary</a>
+    </div>
+    <div class="sidebar-group"><div class="sidebar-label">Practice</div><a href="practice.html">Q&amp;A + Quiz</a><a href="projects.html">Build: Projects</a></div>
+    <div class="sidebar-group"><div class="sidebar-label">Reference</div><a href="resources.html">Sources &amp; Contributing</a></div>
+  </nav>
+
+  <div class="content-wrap with-toc">
+    <div class="col">
+    <main class="page" id="main">
+
+      <div class="eyebrow">Learn · 04</div>
+      <h1 class="page-title">Verbs &amp; Conjugation</h1>
+      <p class="page-dek">Arabic verbs are built, not memorized one at a time: a three-letter root plus a pattern of vowels and affixes gives you tense, subject, and often meaning itself.</p>
+
+      <h2 id="two-tenses">Two core tenses (really: two aspects)</h2>
+      <p>
+        Arabic verbs are traditionally described as having two main conjugations, closer to grammatical
+        <em>aspect</em> than to English tense:
+      </p>
+      <ul>
+        <li><strong>Past / perfective (al-māḍī)</strong> — a completed action. Built by adding suffixes to the root: <span class="ar">كَتَبْـتُ</span> <span class="translit">katab-tu</span> ("I wrote").</li>
+        <li><strong>Present / imperfective (al-muḍāriʿ)</strong> — an ongoing or habitual action. Built by adding both a prefix <em>and</em> a suffix: <span class="ar">أَ-كْتُبُ</span> <span class="translit">a-ktubu</span> ("I write / am writing").</li>
+      </ul>
+      <p>Future is formed by prefixing <span class="ar">سَـ</span> (<span class="translit">sa-</span>) or <span class="ar">سَوْفَ</span> (<span class="translit">sawfa</span>) onto the present tense — there's no separate future conjugation to learn.</p>
+
+      <h2 id="root-pattern">The root-and-pattern engine</h2>
+      <p>
+        Almost every Arabic verb reduces to a bare <strong>3-letter root</strong> carrying an abstract core
+        meaning, and a <strong>pattern</strong> (vowels, doubled letters, prefixes) that turns that meaning
+        into a specific verb, and by extension into related nouns and adjectives.
+      </p>
+      <div class="root-card" data-root-card="2"></div>
+
+      <h2 id="ten-forms">The ten verb forms</h2>
+      <p>
+        Classical Arabic grammar organizes derived verbs into ten numbered "forms" (I is the plain root verb;
+        II–X each add a specific prefix/infix pattern that shifts the meaning in a predictable direction —
+        causative, reflexive, reciprocal, and so on). This is a real numbered sequence used throughout every
+        Arabic dictionary, so the numbering below is functional, not decorative.
+      </p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Form</th><th>Pattern</th><th>Typical shift in meaning</th><th>Example (root س ل م)</th></tr></thead>
+          <tbody>
+            <tr><td>I</td><td class="translit-cell">CaCaCa</td><td>the base meaning</td><td><span class="ar">سَلِمَ</span> <span class="translit">salima</span> "he was safe"</td></tr>
+            <tr><td>II</td><td class="translit-cell">CaCCaCa</td><td>causative / intensive</td><td><span class="ar">سَلَّمَ</span> <span class="translit">sallama</span> "he handed over / greeted"</td></tr>
+            <tr><td>III</td><td class="translit-cell">CāCaCa</td><td>reciprocal / "did X with someone"</td><td><span class="ar">سَالَمَ</span> <span class="translit">sālama</span> "he made peace with"</td></tr>
+            <tr><td>IV</td><td class="translit-cell">ʾaCCaCa</td><td>causative</td><td><span class="ar">أَسْلَمَ</span> <span class="translit">aslama</span> "he submitted / converted"</td></tr>
+            <tr><td>V</td><td class="translit-cell">taCaCCaCa</td><td>reflexive of Form II</td><td><span class="ar">تَسَلَّمَ</span> <span class="translit">tasallama</span> "he received / took possession"</td></tr>
+            <tr><td>VI</td><td class="translit-cell">taCāCaCa</td><td>reflexive/reciprocal of Form III</td><td><span class="ar">تَسَالَمَ</span> <span class="translit">tasālama</span> "they reconciled"</td></tr>
+            <tr><td>VII</td><td class="translit-cell">inCaCaCa</td><td>passive / reflexive</td><td>(rare with this root)</td></tr>
+            <tr><td>VIII</td><td class="translit-cell">iCtaCaCa</td><td>reflexive, often with a shifted meaning</td><td><span class="ar">اِسْتَلَمَ</span>-type patterns; commonly seen with other roots, e.g. <span class="ar">اِجْتَمَعَ</span> <span class="translit">ijtamaʿa</span> "he gathered (intr.)"</td></tr>
+            <tr><td>IX</td><td class="translit-cell">iCCaCCa</td><td>almost exclusively colors/physical defects</td><td><span class="ar">اِحْمَرَّ</span> <span class="translit">iḥmarra</span> "it turned red"</td></tr>
+            <tr><td>X</td><td class="translit-cell">istaCCaCa</td><td>"to seek/consider X"</td><td><span class="ar">اِسْتَسْلَمَ</span> <span class="translit">istaslama</span> "he surrendered"</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note gold">
+        <div class="note-title">Why this is worth learning early</div>
+        Recognize the root <span class="ar">س ل م</span> once, and <span class="ar">سَلَام</span>
+        (<span class="translit">salām</span>, "peace"), <span class="ar">إِسْلَام</span>
+        (<span class="translit">islām</span>, Form IV verbal noun — literally "submission"), and
+        <span class="ar">مُسْلِم</span> (<span class="translit">muslim</span>, Form IV active participle —
+        "one who submits") stop being three unrelated vocabulary items and become one idea viewed from three
+        angles.
+      </div>
+
+      <h2 id="full-conjugation">Full conjugation: كَتَبَ (kataba, "to write")</h2>
+      <p>The complete pronoun set for both tenses of a plain Form I verb — the paradigm every other verb is compared against.</p>
+
+      <h3 id="past-table">Past tense</h3>
+      <div class="table-wrap">
+        <table id="past-table">
+          <thead><tr><th>Pronoun</th><th>Meaning</th><th>Arabic</th><th>Transliteration</th></tr></thead>
+          <tbody id="past-tbody"></tbody>
+        </table>
+      </div>
+
+      <h3 id="present-table">Present tense</h3>
+      <div class="table-wrap">
+        <table id="present-table">
+          <thead><tr><th>Pronoun</th><th>Meaning</th><th>Arabic</th><th>Transliteration</th></tr></thead>
+          <tbody id="present-tbody"></tbody>
+        </table>
+      </div>
+
+      <div class="note">
+        <div class="note-title">Pattern to notice</div>
+        Past tense is built by adding a <strong>suffix</strong> to the root (كَتَبْ + تُ, كَتَبْ + تَ...).
+        Present tense wraps the root in <strong>both</strong> a prefix and often a suffix
+        (أَ + كتب + ُ, تَ + كتب + ِينَ...). Once this shape is internalized, you can conjugate almost any
+        Form-I root the same way — try it live in the <a href="projects.html#drill">conjugation drill
+        project</a>.
+      </div>
+
+      <h2 id="imperative">The imperative</h2>
+      <p>Commands are built from the present-tense stem by dropping the prefix and adjusting the start:</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>To</th><th>Arabic</th><th>Translit.</th></tr></thead>
+          <tbody>
+            <tr><td>you (m.)</td><td class="ar-cell">اُكْتُبْ</td><td class="translit-cell">uktub</td></tr>
+            <tr><td>you (f.)</td><td class="ar-cell">اُكْتُبِي</td><td class="translit-cell">uktubī</td></tr>
+            <tr><td>you (pl. m.)</td><td class="ar-cell">اُكْتُبُوا</td><td class="translit-cell">uktubū</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="negation">Negating verbs</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Tense</th><th>Negator</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td>Past</td><td class="ar-cell">لَمْ + jussive present</td><td><span class="ar">لَمْ أَكْتُبْ</span> <span class="translit">lam aktub</span> "I did not write"</td></tr>
+            <tr><td>Present (habitual)</td><td class="ar-cell">لَا</td><td><span class="ar">لَا أَكْتُبُ</span> <span class="translit">lā aktubu</span> "I don't write"</td></tr>
+            <tr><td>Future</td><td class="ar-cell">لَنْ + subjunctive</td><td><span class="ar">لَنْ أَكْتُبَ</span> <span class="translit">lan aktuba</span> "I will not write"</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="muted">Note the past-tense negator actually uses the present-tense verb form (in the "jussive" mood) — a common early surprise for learners.</p>
+
+    </main>
+    <footer class="site-footer" style="margin:0 32px;">
+      arabic.ai — an open-source, practical Arabic learning reference. See <a href="resources.html" style="color:var(--gold-soft);">Sources &amp; Contributing</a>.
+    </footer>
+    </div>
+  </div>
+
+  <aside class="toc"><div class="toc-inner"><div class="toc-label">On this page</div><div class="toc-list"></div></div></aside>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+  (function(){
+    function fill(id, rows){
+      const tbody = document.getElementById(id);
+      rows.forEach(r => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `<td>${r.person}</td><td class="muted">${r.en}</td><td class="ar-cell">${r.ar}</td><td class="translit-cell">${r.translit}</td>`;
+        tbody.appendChild(tr);
+      });
+    }
+    fill("past-tbody", VERB_KATABA.past);
+    fill("present-tbody", VERB_KATABA.present);
+  })();
+</script>
+</body>
+</html>

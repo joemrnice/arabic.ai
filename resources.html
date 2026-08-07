@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sources & Contributing — arabic.ai</title>
+<meta name="description" content="Reference sources this guide draws on, and how to contribute to the open-source arabic.ai repository.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="flex items-center gap-3">
+    <button class="menu-toggle btn btn-ghost" aria-label="Toggle navigation">☰</button>
+    <a href="index.html" class="brand"><span class="brand-ar">ع</span><span>arabic<span class="brand-dot">.ai</span></span></a>
+  </div>
+  <div class="topbar-actions">
+    <button id="translit-toggle" class="btn btn-ghost"></button>
+    <a class="btn btn-gold" href="https://github.com/" target="_blank" rel="noopener">★ Star on GitHub</a>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="sidebar">
+    <div class="sidebar-group"><div class="sidebar-label">Start</div><a href="index.html">Overview</a></div>
+    <div class="sidebar-group">
+      <div class="sidebar-label">Learn</div>
+      <a href="alphabet.html">Alphabet &amp; Script</a>
+      <a href="phonetics.html">Pronunciation &amp; Phonetics</a>
+      <a href="grammar.html">Grammar Deep-Dive</a>
+      <a href="verbs.html">Verbs &amp; Conjugation</a>
+      <a href="sentences.html">Sentence Structure</a>
+      <a href="vocabulary.html">Practical Vocabulary</a>
+    </div>
+    <div class="sidebar-group"><div class="sidebar-label">Practice</div><a href="practice.html">Q&amp;A + Quiz</a><a href="projects.html">Build: Projects</a></div>
+    <div class="sidebar-group"><div class="sidebar-label">Reference</div><a href="resources.html">Sources &amp; Contributing</a></div>
+  </nav>
+
+  <div class="content-wrap with-toc">
+    <div class="col">
+    <main class="page" id="main">
+
+      <div class="eyebrow">Reference</div>
+      <h1 class="page-title">Sources &amp; Contributing</h1>
+      <p class="page-dek">Where this guide's grammar claims come from, and how to submit corrections, new sections, or new projects to the repository.</p>
+
+      <h2 id="sources">Reference sources</h2>
+      <p>
+        This guide simplifies and restructures well-established descriptive grammar of Modern Standard
+        Arabic for a practical, self-taught audience. For deeper or more academic treatment, these are solid
+        starting points:
+      </p>
+      <div class="card-grid" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr));">
+        <a class="card" href="https://en.wikipedia.org/wiki/Arabic_grammar" target="_blank" rel="noopener">
+          <span class="card-title">Wikipedia — Arabic grammar</span>
+          <span class="card-desc">A thorough, well-cited overview of case, mood, and morphology — good for cross-checking specific claims.</span>
+        </a>
+        <a class="card" href="https://en.wiktionary.org/wiki/Category:Arabic_language" target="_blank" rel="noopener">
+          <span class="card-title">Wiktionary — Arabic entries</span>
+          <span class="card-desc">Root-organized dictionary entries with conjugation tables for individual verbs.</span>
+        </a>
+        <a class="card" href="https://www.livelingua.com/course/fsi/Modern_Standard_Arabic_Basic_Course" target="_blank" rel="noopener">
+          <span class="card-title">FSI Modern Standard Arabic (Live Lingua)</span>
+          <span class="card-desc">The (public-domain) US Foreign Service Institute course — dense but authoritative, free to redistribute.</span>
+        </a>
+        <a class="card" href="https://www.almadinacourses.org/" target="_blank" rel="noopener">
+          <span class="card-title">Madina Arabic</span>
+          <span class="card-desc">A widely-used structured course for Classical/MSA grammar fundamentals, iʿrāb included.</span>
+        </a>
+        <a class="card" href="https://en.wikipedia.org/wiki/Arabic_phonology" target="_blank" rel="noopener">
+          <span class="card-title">Wikipedia — Arabic phonology</span>
+          <span class="card-desc">IPA-referenced detail on articulation points and emphatic consonants.</span>
+        </a>
+        <a class="card" href="https://corpus.quran.com/" target="_blank" rel="noopener">
+          <span class="card-title">Quranic Arabic Corpus</span>
+          <span class="card-desc">Word-by-word morphological tagging — a good way to see root-and-pattern analysis applied at scale.</span>
+        </a>
+      </div>
+      <p class="muted">This list is intentionally short and high-quality rather than exhaustive — pull requests adding well-vetted sources are welcome.</p>
+
+      <h2 id="contributing" data-anchor="contributing">Contributing to arabic.ai</h2>
+      <p>This project is meant to be forked, corrected, and extended. A few ground rules that keep it useful:</p>
+      <ol>
+        <li><strong>Every grammar claim needs a source or a native-speaker sanity check.</strong> Open an issue if you're not sure where to verify something.</li>
+        <li><strong>Keep transliteration consistent.</strong> Use the mapping in <span class="tok">js/data.js</span> (<span class="tok">TRANSLIT_MAP</span>) rather than inventing a new romanization per page.</li>
+        <li><strong>No build step, on purpose.</strong> Plain HTML/CSS/JS keeps the barrier to contributing low — please don't introduce a bundler without discussing it in an issue first.</li>
+        <li><strong>New pages should follow the existing shell.</strong> Copy the topbar/sidebar markup from an existing page exactly so navigation stays consistent.</li>
+      </ol>
+
+      <h2 id="local-dev">Running it locally</h2>
+      <div class="code-block">
+        <div class="code-block-head"><span>terminal</span><button class="copy-btn">Copy</button></div>
+        <pre><code>git clone https://github.com/&lt;your-username&gt;/arabic.ai.git
+cd arabic.ai
+# any static file server works — e.g.:
+npx serve .
+# then open the printed localhost URL</code></pre>
+      </div>
+      <p class="muted">A local server (rather than opening index.html directly) avoids browser restrictions on loading local JS modules.</p>
+
+      <h2 id="project-structure">Project structure</h2>
+      <div class="code-block">
+        <div class="code-block-head"><span>repository layout</span><button class="copy-btn">Copy</button></div>
+        <pre><code>arabic.ai/
+├── index.html            Home — overview & site map
+├── alphabet.html         28 letters, forms, dots, sun/moon letters
+├── phonetics.html        Articulation points, vowels, hamza
+├── grammar.html          Gender, number, cases, iḍāfa, pronouns
+├── verbs.html            Root-and-pattern, 10 forms, full conjugation
+├── sentences.html        Nominal/verbal sentences, word order, negation
+├── vocabulary.html       Greetings, numbers, family, phrases
+├── practice.html         FAQ accordion + interactive quiz
+├── projects.html         3 live coding projects to fork
+├── resources.html        This page
+├── css/style.css         Design tokens & every component style
+├── js/data.js             Shared datasets (alphabet, roots, verbs, quiz bank)
+├── js/main.js            Nav, TOC, transliteration toggle, FAQ, flashcards
+├── js/quiz.js            Quiz engine for practice.html
+└── js/projects-demo.js   The three interactive project demos</code></pre>
+      </div>
+
+      <h2 id="license">License</h2>
+      <p>Released under the MIT License — see <span class="tok">LICENSE</span> in the repository root. Use it, remix it, teach with it.</p>
+
+    </main>
+    <footer class="site-footer" style="margin:0 32px;">
+      arabic.ai — an open-source, practical Arabic learning reference.
+    </footer>
+    </div>
+  </div>
+
+  <aside class="toc"><div class="toc-inner"><div class="toc-label">On this page</div><div class="toc-list"></div></div></aside>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
